@@ -1,0 +1,264 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@font-face {
+    font-family: "vazir";
+    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
+        url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
+        url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
+}
+
+:root {
+    --transition: all 0.2s linear;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "vazir";
+    background: white;
+    color: black;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: "vazir";
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+p {
+    margin-bottom: 1.25rem;
+    color: gray;
+}
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+/*
+=============== 
+Navbar Styles
+===============
+*/
+
+.nav-links{
+    display: none;
+}
+.nav{
+    background: rgba(225, 255, 0, 0.284);
+    height: 4.5rem;
+}
+
+.nav-header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.nav-header h3{
+    font-family:cursive;
+    cursor: pointer;
+}
+.nav-header button{
+    font-size: 1.5rem;
+    background: transparent;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-links a{
+        margin: 1rem;
+        transition: all 0.2s;
+    }
+    .nav-links a:hover{
+        color: gray;
+    }
+    .nav-header button{
+        display: none;
+    }
+    .nav-center{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.navbar-fixed{
+    background: white;
+    box-shadow: var(--light-shadow);
+    position: fixed;
+    width: 100%;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.btn {
+    background: rgba(255, 204, 0, 0.395);
+    color: black;
+    padding: 0.1rem;
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px black;
+    border-radius: var(--radius);
+}
+.btn:hover {
+    background: rgba(255, 234, 0, 0.719);
+    color: black;
+    box-shadow: 2px 2px 3px black;
+}
+
+.underline{
+    width: 3px;
+    height: 1rem;
+    font-weight: bolder;
+    margin-bottom: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+=============== 
+Hero
+===============
+*/
+
+.hero{
+    background: rgba(225, 255, 0, 0.284);
+    height: 100vh;
+}
+.hero-info{
+    width: 50%;
+    padding-top: 11rem;
+    padding-right: 3rem;
+}
+
+.hero-info .underline{
+    margin-right: 0px;
+    margin-top: 0px;
+}
+    
+
+.social-icons{
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+}
+.social-icon {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: gray;
+}
+
+.hero-center{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    position: relative;
+}
+
+.hero-info h2, .hero-info h4{
+    margin-bottom:1rem;
+    line-height: 1.5rem;
+}
+
+.hero-img, .about-img{
+    width: 450px;
+    height: 300px;
+    padding-top: 6rem;
+    padding-left: 7rem;
+}
+
+.hero-photo{
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+}
+
+.about-center{
+    display: flex;
+    margin-top: 2rem;
+    padding: 0px 2rem;
+}
+.about-info h2{
+    margin-bottom: 0px;
+}
+.about-photo{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+
