@@ -1,13 +1,5 @@
-/*
-=============== 
-Fonts
-===============
-*/
-@font-face {
+* {
     font-family: "vazir";
-    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
-        url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
-        url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
 }
 
 :root {
@@ -32,7 +24,6 @@ Global Styles
     box-sizing: border-box;
 }
 body {
-    font-family: "vazir";
     background: white;
     color: black;
     line-height: 1.5;
@@ -57,7 +48,6 @@ h3,
 h4 {
     line-height: 1.25;
     margin-bottom: 0.75rem;
-    font-family: "vazir";
 }
 h1 {
     font-size: 3rem;
